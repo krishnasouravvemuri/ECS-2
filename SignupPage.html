@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-family: 'Verdana';
+        }
+
+        .signup_div{
+            border: 2px solid white;
+            position: absolute;
+            top: 75px;
+            width: 450px;
+            height: 550px;
+            border-radius: 8%;
+            margin-left: 850px; 
+        }
+        button {
+            width: 180px;
+            font-size: 16px;
+            margin-left: 20px;
+            margin-top: 70px;
+            height: 40px;
+            cursor: pointer;
+            margin-left: 125px;
+            transition: background-color 0.1s ease, color 0.2s ease, transform 0.5s ease;
+        }
+    
+        button:hover{
+            background-color: #333;
+            color: white;
+            border: white 1px solid;
+            outline: none;
+            transform: scale(1.05);
+        }
+
+        #user_id, #password {
+            height: 30px;
+            width: 360px;
+            padding-left: 10px;
+            margin-left: 20px;
+            margin-top: 50px;
+        }
+
+        #password{
+            margin-top: 40px;
+        }
+
+        #signup_prompt{
+            font-size: 35px;
+            margin-left: 18px;
+        }
+
+        #proceed {
+            margin-left: 155px;
+            position: absolute;
+            top: 460px;
+            opacity: 0; 
+            transition: opacity .2s ease-in-out;
+            color : white ;
+
+        }
+
+        #proceed:hover{
+            cursor: pointer;
+            color : rgb(100, 100, 238);
+        }
+        
+        .greetings{
+            width : 450px;
+            height : 250px;
+            margin-left : 210px;
+            margin-top : 200px;
+        }
+        #welcome_user{
+            font-size : 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="greetings">
+        <p id="welcome_user"><b>Hello there ! <br><br>Hope you are having a good day !</b></p>
+    </div>
+
+    <div class="signup_div">
+        <p id="signup_prompt"><b>Let's proceed to signup</b></p>
+        <input type="text" placeholder="Username" id="user_id">
+        <input type="text" placeholder="Password" id="password">
+        <button onclick="register()">Register</button><br>
+        <a href="Login.html"><label id="proceed">Proceed to login</label></a>
+    </div>
+
+    <script>
+        register = () => {
+            proceed = document.getElementById('proceed')
+            proceed.style.opacity = '1'
+        }
+    </script>
+</body>
+</html>
